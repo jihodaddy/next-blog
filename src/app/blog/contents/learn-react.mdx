@@ -1,0 +1,37 @@
+---
+title: "Learn React"
+publishedAt: "2024-08-01"
+summary: "Learn React with vscode and markdown"
+category: "react"
+---
+
+# This is a markdown file
+
+`<Newsletter />`
+
+here is a list of items:
+
+- Item one - React
+- Item two - Management States
+- Item three - Tailwind
+
+```jsx
+'use client'
+
+import { useRouter } from 'next/navigation'
+import React from 'react'
+
+const ContactButton = () => {
+  const router = useRouter()
+
+  function handleClick () {
+    router.push('/contact')
+  }
+
+  return (
+    <button onClick={handleClick}>Contact</button>
+  )
+}
+
+export default ContactButton
+```

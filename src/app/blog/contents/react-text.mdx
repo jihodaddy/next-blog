@@ -1,0 +1,37 @@
+---
+title: "React Mdx Test"
+publishedAt: "2024-06-23"
+summary: "Learn vscode and markdown"
+category: "css"
+---
+
+# This is a markdown file
+
+`<Newsletter />`
+
+here is a list of items:
+
+- Item one
+- Item two
+- Item three
+
+```jsx
+'use client'
+
+import { useRouter } from 'next/navigation'
+import React from 'react'
+
+const ContactButton = () => {
+  const router = useRouter()
+
+  function handleClick () {
+    router.push('/contact')
+  }
+
+  return (
+    <button onClick={handleClick}>Contact</button>
+  )
+}
+
+export default ContactButton
+```
