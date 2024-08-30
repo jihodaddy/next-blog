@@ -31,6 +31,15 @@ export function getBlogPosts() {
   return getMdxData(path.join(process.cwd(), 'src', 'app', 'blog', 'contents'));
 }
 
+export function getTermsOfServices() {
+  return getMdxData(
+    path.join(process.cwd(), 'src', 'app', 'terms-of-services'));
+}
+
+export function getPrivacyPolicy() {
+  return getMdxData(path.join(process.cwd(), "src", "app", "privacy-policy"));
+}
+
 export function formatDate(date: string, includeRelative = false) {
   let currentDate = new Date();
   if (date.includes('T')) {
@@ -46,11 +55,11 @@ export function formatDate(date: string, includeRelative = false) {
   let formattedDate = '';
 
   if (yearAgo > 0) {
-    formattedDate = `(${yearAgo}y ago)`;
+    formattedDate = `${yearAgo}y ago`;
   }else if(monthAgo > 0) {
-    formattedDate = `(${monthAgo}mo ago)`;
+    formattedDate = `${monthAgo}mo ago`;
   } else if(daysAgo > 0) {
-    formattedDate = `(${daysAgo}d ago)`;
+    formattedDate = `${daysAgo}d ago`;
   } else {
     formattedDate = 'Today';
   }
@@ -65,5 +74,5 @@ export function formatDate(date: string, includeRelative = false) {
     return fullDate;
   }
 
-  return `${fullDate} ${formattedDate}`;
+  return `${fullDate} (${formattedDate})`;
 }
