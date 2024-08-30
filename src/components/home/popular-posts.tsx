@@ -1,10 +1,9 @@
 'use client'
 
-import { popularPosts } from "@/lib/placeholder-data";
-import { Icons } from "../icons";
+import { fetcher, fetchUrl } from "@/lib/utils";
 import Link from "next/link";
 import useSWR from "swr";
-import { fetcher, fetchUrl } from "@/lib/utils";
+import { Icons } from "../icons";
 import PopularPostsSkeleton from "../skeleton/popular-posts-skeleton";
 
 export default function PopularPosts() {

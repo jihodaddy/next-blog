@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { getBlogPosts } from '../utils';
 import { notFound } from 'next/navigation';
-import { Container } from '@/components/Container';
+import Container from '@/components/Container';
 import Link from 'next/link';
 import CardCategory from '@/components/CardCategory';
 import Header from '@/components/Header';
@@ -12,6 +12,15 @@ export async function generateStaticParams() {
   return posts.map((post) => ({
     category: post.metadata.category,
   }))
+}
+
+export function generateMetadata({ params }: { params: { category: string } }) {
+  let { category } = params;
+
+  return {
+    title: category.toLocaleUpperCase(),
+    description: `All articles reagarding ${category}`,
+  };
 }
 
 export default function Page ({params}: {params: {category: string}}) {

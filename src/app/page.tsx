@@ -1,4 +1,4 @@
-import { Container } from "@/components/Container";
+import Container from "@/components/Container";
 import LatestPosts from "@/components/home/latest-posts";
 import PopularPosts from "@/components/home/popular-posts";
 import TopCategories from "@/components/home/top-categories";
