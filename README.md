@@ -2,6 +2,9 @@
 
 Next.js 14, MDX, Prisma, shadcn/ui를 사용하여 제작된 블로그 애플리케이션입니다. 이 애플리케이션은 Vercel을 통해 배포되었습니다.
 
+![alt text](public/screenshot-full.png)
+![alt text](public/Screenshot.jpg)
+
 ## 주요 기능
 - **MDX 지원**: Markdown과 React 컴포넌트를 함께 사용하여 유연한 콘텐츠 작성이 가능합니다.
 - **Prisma**: 데이터베이스 관리를 위해 Prisma를 사용하여 직관적인 데이터 모델링 및 쿼리가 가능합니다.
@@ -40,8 +43,10 @@ Next.js 14, MDX, Prisma, shadcn/ui를 사용하여 제작된 블로그 애플리
 4. 환경 변수를 설정합니다:
 
     `.env` 파일을 생성하고 다음과 같은 환경 변수를 설정합니다:
+    
+    - 프리즈마 연동시 자동 등록됨.
+
     ```env
-    # 프리즈마 연동시 자동 등록됨.
     DATABASE_URL=
 
     POSTGRES_URL=
